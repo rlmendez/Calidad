@@ -16,8 +16,8 @@
         <tr>
         <Td BGCOLOR="#FFFFFF" width="1500">  
 
-      <form name="FormularioEmp" type="submit" action="delete_ProveedoresEm.php" method="post">
-      <div align="center"><u><H1><FONT COLOR="#FF0000">Registro de Vendedores</FONT></H1></u></div>
+      <form name="FormularioEmp" type="submit" action="http://localhost:8888/Calidad/Controladores/Insert/insert_Venta.php" method="post">
+      <div align="center"><u><H1><FONT COLOR="#FF0000">Registro de Ventas</FONT></H1></u></div>
         
         </Td>
         </tr>
@@ -25,7 +25,7 @@
         <tr>
         <Td width="1500"> 
         
-        <div align="center"><u><H3><FONT COLOR="#000000" FACE="Arial">Informaci&oacuten del Vendedor</FONT></H3></u></div>
+        <div align="center"><u><H3><FONT COLOR="#000000" FACE="Arial">Informaci&oacuten del Venta</FONT></H3></u></div>
 
         <br><center><TABLE BORDER="2">
              <TR>
