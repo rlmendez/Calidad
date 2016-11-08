@@ -30,15 +30,15 @@
         <br><center><TABLE BORDER="2">
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">ID del Auto</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="text" size="6" maxlength="5" name="id_Vendedor" min=1></TD>
+                <TD BGCOLOR="#FFFFFF"><input type="text" size="6" maxlength="5" name="id_Auto" min=1></TD>
              </TR>
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Modelo (Nombre):</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="text" size="25" maxlength="24" name="Nombres" min=1></TD>
+                <TD BGCOLOR="#FFFFFF"><input type="text" size="25" maxlength="24" name="Nombre" min=1></TD>
              </TR>
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Marca</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><select>
+                <TD BGCOLOR="#FFFFFF" name="tipo"><select>
                 <option value="volvo">Volvo</option>
                 <option value="saab">Saab</option>
                 <option value="mercedes">Mercedes</option>
@@ -47,7 +47,7 @@
              </TR>
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Puntos:</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="number" size="3" maxlength="2" name="Nombres" min=1></TD>
+                <TD BGCOLOR="#FFFFFF"><input type="number" size="3" maxlength="2" name="Puntos" min=1></TD>
              </TR>
       </TABLE></center></br>
 
