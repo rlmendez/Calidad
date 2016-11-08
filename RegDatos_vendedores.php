@@ -42,7 +42,7 @@
              </TR>
       </TABLE></center></br>
 
-        <br><center><input type="image" src="Eliminar.jpg" WIDTH="60" HEIGHT="60" alt="Eliminar" value="Eliminar"></form><A HREF="http://licitaciones/COTIZACIONES/Menu%20Cotizaciones.html"><IMG SRC="Regresar.jpg" WIDTH="60" HEIGHT="60"></IMG></A></center>
+        <br><center><input type="image" src="http://localhost:8888/Calidad/Imagenes/Guardar.jpg" WIDTH="60" HEIGHT="60" alt="Guardar" value="Guardar"></form></center>
 
         </Td>
         </tr>
