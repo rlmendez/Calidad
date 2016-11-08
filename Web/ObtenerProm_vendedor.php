@@ -1,6 +1,6 @@
 <HTML>
   <head>
-    <TITLE>Vendedores</TITLE>
+    <TITLE>Consulta</TITLE>
       <meta charset="utf-8">
      <meta name="author" content="Marco Méndez">
      </head>
@@ -17,7 +17,7 @@
         <Td BGCOLOR="#FFFFFF" width="1500">  
 
       <form name="FormularioEmp" type="submit" action="delete_ProveedoresEm.php" method="post">
-      <div align="center"><u><H1><FONT COLOR="#FF0000">Registro de Vendedores</FONT></H1></u></div>
+      <div align="center"><u><H1><FONT COLOR="#FF0000">Consulta de Ventas Individuales</FONT></H1></u></div>
         
         </Td>
         </tr>
@@ -32,17 +32,9 @@
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">ID del Vendedor</FONT></H4></i></div></TD>
                 <TD BGCOLOR="#FFFFFF"><input type="number" size="15" maxlength="15" value="ID" name="id_Vendedor" min=1></TD>
              </TR>
-             <TR>
-                <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Nombres:</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="text" size="25" maxlength="24" name="Nombres" min=1></TD>
-             </TR>
-             <TR>
-                <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Apellidos</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="text" size="25" maxlength="24" name="Apellidos" min=1></TD>
-             </TR>
       </TABLE></center></br>
 
-        <br><center><input type="image" src="http://localhost:8888/Calidad/Imagenes/Guardar.jpg" WIDTH="60" HEIGHT="60" alt="Guardar" value="Guardar"></form>
+       <br><center><input type="image" src="http://localhost:8888/Calidad/Imagenes/Busqueda.jpg" WIDTH="60" HEIGHT="60"></form>
        <a href="http://localhost:8888/Calidad/Web/Menu.php"><img src="http://localhost:8888/Calidad/Imagenes/Regresar.jpg" WIDTH="60" HEIGHT="60"></a></center>
 
         </Td>
