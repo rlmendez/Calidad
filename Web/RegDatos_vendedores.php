@@ -30,15 +30,15 @@
         <br><center><TABLE BORDER="2">
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">ID del Vendedor</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="number" size="15" maxlength="15" value="ID" name="id_Vendedor" min=1></TD>
+                <TD BGCOLOR="#FFFFFF"><input type="number" size="15" maxlength="15" value="ID" name="id_Vendedor" id="id_Vendedor" min=1></TD>
              </TR>
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Nombres:</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="text" size="25" maxlength="24" name="Nombres" min=1></TD>
+                <TD BGCOLOR="#FFFFFF"><input type="text" size="25" maxlength="24" name="Nombres" id="Nombres" min=1></TD>
              </TR>
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Apellidos</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="text" size="25" maxlength="24" name="Apellidos" min=1></TD>
+                <TD BGCOLOR="#FFFFFF"><input type="text" size="25" maxlength="24" name="Apellidos" id="Apellidos" min=1></TD>
              </TR>
       </TABLE></center></br>
 

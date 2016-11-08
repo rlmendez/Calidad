@@ -30,11 +30,11 @@
         <br><center><TABLE BORDER="2">
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">ID del Vendedor:</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="number" size="15" maxlength="15" value="ID" name="id_Vendedor" min=1></TD>
+                <TD BGCOLOR="#FFFFFF"><input type="number" size="15" maxlength="15" value="ID" name="id_Vendedor" id="id_Vendedor" min=1></TD>
              </TR>
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Marca:</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><select>
+                <TD BGCOLOR="#FFFFFF" name="marca" id="marca"><select>
                 <option value="volvo">Volvo</option>
                 <option value="saab">Saab</option>
                 <option value="mercedes">Mercedes</option>
@@ -43,7 +43,7 @@
              </TR>
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Cliente: </FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="text" size="25" maxlength="24" name="Cliente"></TD>
+                <TD BGCOLOR="#FFFFFF"><input type="text" size="25" maxlength="24" name="Cliente" id="Cliente"></TD>
              </TR>
       </TABLE></center></br>
 
