@@ -21,7 +21,9 @@
 	$marca = $_POST['marca'];
 	$cliente = $_POST['Cliente'];
 
-	$insertar=mysql_query("INSERT INTO Ventas values('$id','$marca','$cliente')",$conexion);
+  CALCULO DE PUNTOS ASIGNADOS
+
+	$insertar=mysql_query("INSERT INTO Ventas values('$id','$marca','$cliente','$Puntaje')",$conexion);
 	if(!$insertar){
        echo "<FONT COLOR='#000000' SIZE='4'><b>Fallo en la insercion de registro en la Base de Datos</b></FONT>";
 	}
