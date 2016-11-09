@@ -16,7 +16,7 @@
         <tr>
         <Td BGCOLOR="#FFFFFF" width="1500">  
 
-      <form name="FormularioEmp" type="submit" action="delete_ProveedoresEm.php" method="post">
+      <form name="FormularioEmp" type="submit" action="http://localhost:8888/Calidad/Controladores/Búsqueda/Vendedor.php" method="post">
       <div align="center"><u><H1><FONT COLOR="#FF0000">Consulta de Ventas Individuales</FONT></H1></u></div>
         
         </Td>

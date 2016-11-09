@@ -15,7 +15,7 @@
 
       <?php  
 
-   	include ("http://localhost:8888/Calidad/Controladores/Otros/conexion.php");
+  include ("http://localhost:8888/Calidad/Controladores/Otros/conexion.php");
 
 	$id = $_POST['id_Vendedor'];
 	$marca = $_POST['marca'];
