@@ -21,19 +21,19 @@
         
         <br><center><TABLE BORDER="2">
             <TR>
-                <TD><center><a href="http://localhost:8888/Calidad/Web/RegDatos_vendedores.php">Registro de Vendedores</a></center></TD>
+                <TD><center><a href="http://localhost/Calidad/Web/RegDatos_vendedores.php">Registro de Vendedores</a></center></TD>
             </TR>
             <TR>
-                <TD><center><a href="http://localhost:8888/Calidad/Web/RegDatos_marcas.php">Registro de Autos</a></center></TD>
+                <TD><center><a href="http://localhost:/Calidad/Web/RegDatos_marcas.php">Registro de Autos</a></center></TD>
             </TR>
             <TR>
-                <TD><center><a href="http://localhost:8888/Calidad/Web/IngresarVentas.php">Registro de Ventas</a></center></TD>
+                <TD><center><a href="http://localhost:/Calidad/Web/IngresarVentas.php">Registro de Ventas</a></center></TD>
             </TR>
             <TR>
-                <TD><center><a href="http://localhost:8888/Calidad/Web/ObtenerProm_vendedor.php">Informe Individual</a></center></TD>
+                <TD><center><a href="http://localhost:/Calidad/Web/ObtenerProm_vendedor.php">Informe Individual</a></center></TD>
             </TR>
             <TR>
-                <TD><center><a href="http://localhost:8888/Calidad/Controladores/Búsqueda/Grupal.php">Informe Grupal</a></center></TD>
+                <TD><center><a href="http://localhost:/Calidad/Controladores/Búsqueda/Grupal.php">Informe Grupal</a></center></TD>
             </TR>            
       </TABLE></center></br>
         </Td>

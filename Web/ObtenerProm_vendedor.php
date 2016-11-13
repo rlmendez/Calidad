@@ -16,7 +16,7 @@
         <tr>
         <Td BGCOLOR="#FFFFFF" width="1500">  
 
-      <form name="FormularioEmp" type="submit" action="http://localhost:8888/Calidad/Controladores/Búsqueda/Vendedor.php" method="post">
+      <form name="FormularioEmp" type="submit" action="http://localhost/Calidad/Controladores/Búsqueda/Vendedor.php" method="post">
       <div align="center"><u><H1><FONT COLOR="#FF0000">Consulta de Ventas Individuales</FONT></H1></u></div>
         
         </Td>
@@ -34,8 +34,8 @@
              </TR>
       </TABLE></center></br>
 
-       <br><center><input type="image" src="http://localhost:8888/Calidad/Imagenes/Busqueda.jpg" WIDTH="60" HEIGHT="60"></form>
-       <a href="http://localhost:8888/Calidad/Web/Menu.php"><img src="http://localhost:8888/Calidad/Imagenes/Regresar.jpg" WIDTH="60" HEIGHT="60"></a></center>
+       <br><center><input type="image" src="http://localhost/Calidad/Imagenes/Busqueda.jpg" WIDTH="60" HEIGHT="60"></form>
+       <a href="http://localhost/Calidad/Web/Menu.php"><img src="http://localhost/Calidad/Imagenes/Regresar.jpg" WIDTH="60" HEIGHT="60"></a></center>
 
         </Td>
         </tr>

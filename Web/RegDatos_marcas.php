@@ -16,7 +16,7 @@
         <tr>
         <Td BGCOLOR="#FFFFFF" width="1500">  
 
-      <form name="FormularioEmp" type="submit" action="http://localhost:8888/Calidad/Controladores/Insert/insert_Marca.php" method="post">
+      <form name="FormularioEmp" type="submit" action="http://localhost/Calidad/Controladores/Insert/insert_Marca.php" method="post">
       <div align="center"><u><H1><FONT COLOR="#FF0000">Registro de Marcas de los Autos</FONT></H1></u></div>
         
         </Td>
@@ -51,8 +51,8 @@
              </TR>
       </TABLE></center></br>
 
-        <br><center><input type="image" src="http://localhost:8888/Calidad/Imagenes/Guardar.jpg" WIDTH="60" HEIGHT="60" alt="Guardar" value="Guardar"></form>
-       <a href="http://localhost:8888/Calidad/Web/Menu.php"><img src="http://localhost:8888/Calidad/Imagenes/Regresar.jpg" WIDTH="60" HEIGHT="60"></a></center>
+        <br><center><input type="image" src="http://localhost/Calidad/Imagenes/Guardar.jpg" WIDTH="60" HEIGHT="60" alt="Guardar" value="Guardar"></form>
+       <a href="http://localhost/Calidad/Web/Menu.php"><img src="http://localhost/Calidad/Imagenes/Regresar.jpg" WIDTH="60" HEIGHT="60"></a></center>
 
         </Td>
         </tr>

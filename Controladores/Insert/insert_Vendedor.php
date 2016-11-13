@@ -13,27 +13,36 @@
 
         <CENTER>
 
-      <?php  
+  <?php  
 
-   	include ("http://localhost:8888/Calidad/Controladores/Otros/conexion.php");
+  //include("http://localhost/Calidad/Controladores/Otros/conexion.php");
 
-	$id = $_POST['id_Vendedor'];
-	$Nombre = $_POST['Nombres'];
-	$Apellido = $_POST['Apellidos'];
+   // Create connection
+  $conn = new mysqli("127.0.0.1", "root", "root", "Ventas", 3306);
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  } 
 
-	$insertar=mysql_query("INSERT INTO Vendedor values('$id','$Nombre','$Apellido')",$conexion);
-	if(!$insertar){
-       echo "<FONT COLOR='#000000' SIZE='4'><b>Fallo en la insercion de registro en la Base de Datos</b></FONT>";
-	}
-	else{
-		echo "<FONT COLOR='#000000' SIZE='4'><b>Realizada la insercion de registro en la Base de Datos</b></FONT>";
-	}
-	mysql_close($conexion);
+  $id = $_POST['id_Vendedor'];
+  $Nombre = $_POST['Nombres'];
+  $Apellido = $_POST['Apellidos'];
+
+  $sql = "INSERT INTO Vendedor (id_Vendedor, Nombres, Apellidos)
+  VALUES ('$id', '$Nombre', '$Apellido')";
+
+  if ($conn->query($sql) === TRUE) {
+      echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
+
+  $conn->close();
 		?> 
 		 </CENTER>
 
         <br><center>
-       <a href="http://localhost:8888/Calidad/Web/Menu.php"><img src="http://localhost:8888/Calidad/Imagenes/Regresar.jpg" WIDTH="60" HEIGHT="60"></a></center>
+       <a href="http://localhost/Calidad/Web/Menu.php"><img src="http://localhost/Calidad/Imagenes/Regresar.jpg" WIDTH="60" HEIGHT="60"></a></center>
 
         <left><H5>Autor: Marco Antonio Méndez Espitia</H5></left>
      </BODY>

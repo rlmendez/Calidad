@@ -1,5 +1,10 @@
 <?php 
 
-    $conexion=mysql_connect("localhost:3306","root","root") or die (mysql_error());
-	mysql_select_db("inventariosobras",$conexion);    
+  // Create connection
+  $conn = new mysqli("127.0.0.1", "root", "root", "Ventas", 3306);
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  } 
+
 ?>  
