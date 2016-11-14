@@ -15,9 +15,7 @@
 
   <?php  
 
-  //include("http://localhost/Calidad/Controladores/Otros/conexion.php");
-
-   // Create connection
+  // Create connection
   $conn = new mysqli("127.0.0.1", "root", "root", "Ventas", 3306);
   // Check connection
   if ($conn->connect_error) {
@@ -32,7 +30,7 @@
   VALUES ('$id', '$Nombre', '$Apellido')";
 
   if ($conn->query($sql) === TRUE) {
-      echo "New record created successfully";
+      echo "Información Registrada";
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }

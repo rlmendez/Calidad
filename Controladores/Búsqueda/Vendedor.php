@@ -15,47 +15,39 @@
 <?php  
 
 echo "<h3><I>";
-echo "Resultados Busqueda Individual";
+echo "Resultados Búsqueda Individual";
 echo "</h3></I>";
 
-include ("http://localhost:8888/Calidad/Controladores/Otros/conexion.php");
 $Busq = $_POST['id_Vendedor'];
-$result = mysql_query("select sum(`Ventas`.`Puntaje`) as Puntaje, `Vendedor`.`id_Vendedor` as ID, 
-`Vendedor`.`Nombres`, `Vendedor`.`Apellidos`
-FROM `Vendedor` , `Ventas` 
-where `Vendedor`.`id_Vendedor`=`Ventas`.`id_Vendedor` and `Vendedor`.`id_Vendedor` like %$Busq%",$conexion); 
 
-if ($row = mysql_fetch_array($result)){ 
-   echo "<table border = '1'> \n"; 
-   echo "<tr>
-   <TD BGCOLOR='#FFF810' rowspan='2'><center>CC</center></td>
-   <TD BGCOLOR='#FFF810' rowspan='2'><center>Apellido</center></td>
-   <TD BGCOLOR='#FFF810' rowspan='2'><center>Nombres</center></td>
-   <TD BGCOLOR='#FFF810' colspan='3'><center>Puntaje</center></td>
-   </tr> \n";
-  echo "<tr><TD BGCOLOR='#FFF810'><center>Año</center></td><TD BGCOLOR='#FFF810'><center>Mes</center></td><TD BGCOLOR='#FFF810'><center>Día</center></td></tr> \n";  
-   do { 
-      echo "<tr>
-      <TD BGCOLOR='#FFFFFF'><center>".$row["ID"]."</center></td>
-      <TD BGCOLOR='#FFFFFF'><center>".$row["Ape"]."</center></td>
-      <TD BGCOLOR='#FFFFFF'><center>".$row["Nom"]."</center></td>
-      <TD BGCOLOR='#FFF810'><center>".number_format($row["Puntaje"],0,'.',',')."</center></td>
-      </tr> \n";  
-   } while ($row = mysql_fetch_array($result)); 
-   echo "</table> \n";
-  echo "<br><center>"
-  echo "<a href='http://localhost:8888/Calidad/Web/Menu.php'>"
-  echo "<img src='http://localhost:8888/Calidad/Imagenes/Regresar.jpg' WIDTH='60' HEIGHT='60'></a></center>"
-  echo "<left><H5>Autor: Marco Antonio Méndez Espitia</H5></left>"
-} else { 
-  echo "<br>";echo "<br>";echo "<br>";
-echo "<FONT COLOR='#000000' SIZE='4'><b> ¡ No se ha encontrado ningún registro !</b></FONT>";
-echo "<br><center>"
-  echo "<a href='http://localhost:8888/Calidad/Web/Menu.php'>"
-  echo "<img src='http://localhost:8888/Calidad/Imagenes/Regresar.jpg' WIDTH='60' HEIGHT='60'></a></center>"
-  echo "<left><H5>Autor: Marco Antonio Méndez Espitia</H5></left>" 
-} 
+      // Create connection
+    $conn = new mysqli("127.0.0.1", "root", "root", "Ventas", 3306);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+    $sql = "SELECT id_Auto, Nombre, tipo FROM Autos";
+    $result = $conn->query($sql);
+
+    echo "<center>";
+    if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "Auto: " . $row["id_Auto"]. " - Nombre: " . $row["Nombre"]. " - Linea: " . $row["tipo"]. "<br>";
+        }
+    } else {
+        echo "0 results";
+    }
+    echo "</center>";
+    $conn->close();
+
+ 
 ?>  
      </CENTER>
+      <br><center>
+       <a href="http://localhost/Calidad/Web/Menu.php"><img src="http://localhost/Calidad/Imagenes/Regresar.jpg" WIDTH="60" HEIGHT="60"></a></center>
+
+        <left><H5>Autor: Marco Antonio Méndez Espitia</H5></left>
+     
      </BODY>
 </HTML>

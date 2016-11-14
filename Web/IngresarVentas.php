@@ -16,7 +16,7 @@
         <tr>
         <Td BGCOLOR="#FFFFFF" width="1500">  
 
-      <form name="FormularioEmp" type="submit" action="http://localhost:8888/Calidad/Controladores/Insert/insert_Venta.php" method="post">
+      <form name="FormularioEmp" type="submit" action="http://localhost/Calidad/Controladores/Insert/insert_Venta.php" method="post">
       <div align="center"><u><H1><FONT COLOR="#FF0000">Registro de Ventas</FONT></H1></u></div>
         
         </Td>
@@ -30,25 +30,40 @@
         <br><center><TABLE BORDER="2">
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">ID del Vendedor:</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="number" size="15" maxlength="15" value="ID" name="id_Vendedor" id="id_Vendedor" min=1></TD>
+                <TD BGCOLOR="#FFFFFF"><input type="number" size="15" maxlength="15" name="id_Vendedor" id="id_Vendedor" min=1></TD>
              </TR>
              <TR>
-                <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Marca:</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF" name="marca" id="marca"><select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-                </select></TD>
-             </TR>
-             <TR>
-                <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Cliente: </FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="text" size="25" maxlength="24" name="Cliente" id="Cliente"></TD>
+                <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Auto:</FONT></H4></i></div></TD>
+                <TD BGCOLOR="#FFFFFF"><input type="text" size="10" maxlength="9" name="Auto" id="Auto" ></TD>
              </TR>
       </TABLE></center></br>
 
-       <br><center><input type="image" src="http://localhost:8888/Calidad/Imagenes/Guardar.jpg" WIDTH="60" HEIGHT="60" alt="Guardar" value="Guardar"></form>
-       <a href="http://localhost:8888/Calidad/Web/Menu.php"><img src="http://localhost:8888/Calidad/Imagenes/Regresar.jpg" WIDTH="60" HEIGHT="60"></a></center>
+      <?php
+
+           // Create connection
+    $conn = new mysqli("127.0.0.1", "root", "root", "Ventas", 3306);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+    $sql = "SELECT id_Auto, Nombre, tipo FROM Autos";
+    $result = $conn->query($sql);
+
+    echo "<center>";
+    if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "Auto: " . $row["id_Auto"]. " - Nombre: " . $row["Nombre"]. " - Linea: " . $row["tipo"]. "<br>";
+        }
+    } else {
+        echo "0 results";
+    }
+    echo "</center>";
+    $conn->close();
+      ?> 
+
+       <br><center><input type="image" src="http://localhost/Calidad/Imagenes/Guardar.jpg" WIDTH="60" HEIGHT="60" alt="Guardar" value="Guardar"></form>
+       <a href="http://localhost/Calidad/Web/Menu.php"><img src="http://localhost/Calidad/Imagenes/Regresar.jpg" WIDTH="60" HEIGHT="60"></a></center>
 
         </Td>
         </tr>

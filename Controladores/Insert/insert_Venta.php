@@ -15,27 +15,43 @@
 
       <?php  
 
-  include ("http://localhost:8888/Calidad/Controladores/Otros/conexion.php");
+       // Create connection
+  $conn = new mysqli("127.0.0.1", "root", "root", "Ventas", 3306);
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  } 
 
 	$id = $_POST['id_Vendedor'];
-	$marca = $_POST['marca'];
-	$cliente = $_POST['Cliente'];
+	$Marca = $_POST['Auto'];
 
-  CALCULO DE PUNTOS ASIGNADOS
+  $sql = "SELECT id_Auto as id, Puntos_Linea as PL, Calificacion as Cal FROM Autos WHERE id_Auto='$Marca'";
+  $result = $conn->query($sql);
 
-	$insertar=mysql_query("INSERT INTO Ventas values('$id','$marca','$cliente','$Puntaje')",$conexion);
-	if(!$insertar){
-       echo "<FONT COLOR='#000000' SIZE='4'><b>Fallo en la insercion de registro en la Base de Datos</b></FONT>";
-	}
-	else{
-		echo "<FONT COLOR='#000000' SIZE='4'><b>Realizada la insercion de registro en la Base de Datos</b></FONT>";
-	}
-	mysql_close($conexion);
+  if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $Puntaje = ($row["PL"]*$row["Cal"])/100;
+    }
+  } else {
+    echo "0 results";
+  }
+
+  $sql = "INSERT INTO venta (id_Vendedor,Marca,Puntaje)
+  VALUES ('$id','$Marca','$Puntaje')";
+
+  if ($conn->query($sql) === TRUE) {
+      echo "Información Registrada";
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
+
+  $conn->close();
 		?> 
 		 </CENTER>
 
         <br><center>
-       <a href="http://localhost:8888/Calidad/Web/Menu.php"><img src="http://localhost:8888/Calidad/Imagenes/Regresar.jpg" WIDTH="60" HEIGHT="60"></a></center>
+       <a href="http://localhost/Calidad/Web/Menu.php"><img src="http://localhost/Calidad/Imagenes/Regresar.jpg" WIDTH="60" HEIGHT="60"></a></center>
 
         <left><H5>Autor: Marco Antonio Méndez Espitia</H5></left>
      </BODY>

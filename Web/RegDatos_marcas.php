@@ -34,20 +34,26 @@
              </TR>
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Modelo (Nombre):</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="text" size="25" maxlength="24" id="Nombre" name="Nombre" min=1></TD>
+                <TD BGCOLOR="#FFFFFF"><input type="text" size="25" maxlength="24" id="Nombre" name="Nombre"></TD>
              </TR>
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Marca</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF" name="tipo" id="tipo"><select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-                </select></TD>
+                <TD BGCOLOR="#FFFFFF">
+                <select name="Tipo">
+                <option value="Volvo">Volvo</option>
+                <option value="Ferrari">Ferrari</option>
+                <option value="Audi">Audi</option>
+                <option value="Mercedez">Mercedez</option>
+                </select>
+                </TD>
              </TR>
              <TR>
                 <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Puntos:</FONT></H4></i></div></TD>
-                <TD BGCOLOR="#FFFFFF"><input type="number" size="3" maxlength="2" name="Puntos" id="Puntos" min=1></TD>
+                <TD BGCOLOR="#FFFFFF"><input type="number" name="Puntos" type="number" min=2 max=5 step=1></TD>
+             </TR>
+             <TR>
+                <TD BGCOLOR="#FFFFFF"><div align="center"><i><H4><FONT COLOR="#000000" FACE="Arial">Calificación %:</FONT></H4></i></div></TD>
+                <TD BGCOLOR="#FFFFFF"><input name="Porcentaje" type="number" min=10 max=100 step=10></TD>
              </TR>
       </TABLE></center></br>
 
