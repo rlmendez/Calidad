@@ -15,33 +15,34 @@
 <?php  
 
 echo "<h3><I>";
-echo "Resultados Búsqueda Individual";
+echo "Resultados Búsqueda Grupal";
 echo "</h3></I>";
 
-$Busq = $_POST['id_Vendedor'];
 
-      // Create connection
-    $conn = new mysqli("127.0.0.1", "root", "root", "Ventas", 3306);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    } 
-    $sql = "SELECT id_Auto, Nombre, tipo FROM Autos";
+     $conn = new mysqli("127.0.0.1", "root", "root", "Ventas", 3306);
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  } 
+
+    $sql = "SELECT `Vendedor`.`id_Vendedor` as Ven1, `Vendedor`.`Nombres` as Nom, `Vendedor`.`Apellidos` as Ape,
+    `venta`.`id_Vendedor` as Ven2, avg(`venta`.`Puntaje`) as prom
+    FROM Vendedor, venta
+    WHERE `Vendedor`.`id_Vendedor`=`venta`.`id_Vendedor`
+    GROUP by `Vendedor`.`id_Vendedor`";
     $result = $conn->query($sql);
 
     echo "<center>";
     if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "Auto: " . $row["id_Auto"]. " - Nombre: " . $row["Nombre"]. " - Linea: " . $row["tipo"]. "<br>";
+        echo "ID: " . $row["Ven1"]. " - Vendedor: " . $row["Nom"]. " " . $row["Ape"]." - Promedio: " . number_format($row["prom"], 2, ",", ".")."<br>"; 
         }
     } else {
         echo "0 results";
     }
     echo "</center>";
     $conn->close();
-
- 
 ?>  
      </CENTER>
       <br><center>

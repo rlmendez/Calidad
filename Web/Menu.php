@@ -33,7 +33,7 @@
                 <TD><center><a href="http://localhost:/Calidad/Web/ObtenerProm_vendedor.php">Informe Individual</a></center></TD>
             </TR>
             <TR>
-                <TD><center><a href="http://localhost:/Calidad/Controladores/Búsqueda/Grupal.php">Informe Grupal</a></center></TD>
+                <TD><center><a href="http://localhost/Calidad/Controladores/Busqueda/Grupal.php">Informe Grupal</a></center></TD>
             </TR>            
       </TABLE></center></br>
         </Td>
